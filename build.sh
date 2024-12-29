@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-export KERNEL_VERSION=5.4
+export KERNEL_VERSION=6.6
 export BUSYBOX_VERSION=1.32.0
 
 #
@@ -15,7 +15,7 @@ sudo apt-get -q install -y bc bison flex libelf-dev cpio build-essential libssl-
 #
 
 echo "[+] Downloading kernel..."
-wget -q -c https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-$KERNEL_VERSION.tar.gz
+wget -q -c https://mirrors.edge.kernel.org/pub/linux/kernel/v6.x/linux-$KERNEL_VERSION.tar.gz
 [ -e linux-$KERNEL_VERSION ] || tar xzf linux-$KERNEL_VERSION.tar.gz
 
 echo "[+] Building kernel..."
